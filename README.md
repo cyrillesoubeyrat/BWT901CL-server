@@ -15,3 +15,4 @@ python sensor_app.py
 Only tested on Raspberry PI 4 B for now
 
 ## Architecture
+<img width="780" height="409" alt="architecture" src="https://github.com/user-attachments/assets/401f23f8-6c8b-4122-b113-50e6b43a4481" />
