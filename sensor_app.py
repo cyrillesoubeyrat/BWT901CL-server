@@ -29,7 +29,7 @@ def updateData (deviceModel):
     # print(deviceModel.get("HZ"))
 
 # Check for user input from stdin
-async def requested_end_of_bt_data ():
+async def receive_user_input ():
     result = select.select ([sys.stdin], [], [], 0)
     if result[0]:
         return True
@@ -46,7 +46,7 @@ async def receive_sensor_data (sock):
 async def app_loop(sock):
     exit_loop = False
     while not exit_loop:
-        read_stdin_task = asyncio.create_task (requested_end_of_bt_data())
+        read_stdin_task = asyncio.create_task (receive_user_input())
         read_sensor_task = asyncio.create_task (receive_sensor_data(sock))
         await read_sensor_task
         exit_loop = await read_stdin_task

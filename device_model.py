@@ -1,7 +1,7 @@
 ﻿# coding:UTF-8
 import socket
 import time
-import gui_dialogs
+from gui_dialogs import AlarmBox, ListBoxSelect
 import bluetooth_host_controller
 
 # Device instance
